@@ -39,9 +39,11 @@ t-SNE on encoded images:<br />
 Finally I tested how much information is preserved in the encoded image. To do that I run the Support Vector Classification (SVC) on real images, encoded images and decoded images. The results imply very strong ability by VAE to extract features as the SVC on real images got 92% accuracy (same as decoded images) and 88% on encoded images! That is a huge success because the encoded image has only 400 features in total compared to 512 x 512 features that has a real, resized image.
 
 ### Grid of 25 real and decoded images
+The images are fainted with a green color to make better contrast than a grey color map would have had.
+
+
 ![image](https://github.com/user-attachments/assets/79396d17-a564-4aea-93e8-9de7d7246681)
 ![image](https://github.com/user-attachments/assets/3cbc8aaf-5087-4c7a-aafb-e173c3de2c32)
-
 
 
 Dataset is taken from https://data.mendeley.com/datasets/rscbjbr9sj/3.
