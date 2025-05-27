@@ -14,38 +14,19 @@ from multiprocessing import freeze_support
 
 edge_pixels = 512
 
-# Definiujemy transformacje (np. normalizacja, augmentacje)
-# transform = transforms.Compose([
-#     Grayscale(),
-#     transforms.Resize((edge_pixels, edge_pixels)),
-#     transforms.ToTensor()
-# ])
-
-
-
-x_dim = edge_pixels*edge_pixels*1
-
-# Tworzymy dataset dla train i test
-# train_dataset = datasets.ImageFolder(root='chest_xray/train', transform=transform)
-# test_dataset = datasets.ImageFolder(root='chest_xray/test', transform=transform)
+x_dim = edge_pixels * edge_pixels * 1
 
 batch_size = 128
-# Tworzymy DataLoader do batchowania i mieszania danych
-# train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4, pin_memory=True, persistent_workers=True)
-# test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
+
 
 def loss_function(x, x_hat, mean, log_var):
     reproduction_loss = nn.functional.binary_cross_entropy(x_hat, x, reduction='sum')
     KLD = - 0.5 * torch.sum(1 + log_var - mean.pow(2) - log_var.exp())
     # KLD = - 0.5 * torch.sum(1 + var.pow(2).log() - mean.pow(2) - var.pow(2))
     return reproduction_loss + KLD
-
-
-# model = VAE(device=device).to(device)
-# optimizer = Adam(model.parameters(), lr=1e-3)
 
 
 def train(model, optimizer, epochs, device):
@@ -86,5 +67,3 @@ if __name__ == '__main__':
 
     # Uruchomienie treningu
     train(model, optimizer, epochs=50, device=device)
-
-# train(model, optimizer, epochs=30, device=device)
