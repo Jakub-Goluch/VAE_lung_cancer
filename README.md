@@ -17,11 +17,11 @@ Example of the same image after encoding and decoding the data after 1st epoch:<
 
 As you can see, the initial autoencoder creates very blury image which is sharpened at the end of a training stage.
 
-The loss function used in training process is a combination of regular binary cross-entropy to address the data reconstruction and KL divergence to make latent space a normal distribution so it can work as a synthetic data generator.
+The loss function used in training process is a combination of a regular binary cross-entropy to address the data reconstruction and the KL divergence to make latent space a normal distribution so it can work as a synthetic data generator.
 
 ## Synthetic data generator
 
-The one of the biggest advantages of VAE over regular autoencoder is that it can work as a data generator cause it has density function of normal distribution due to a KL divergence part in loss function. Below I show how VAE generates an image from a random noise of image shape generated from gaussian distribution.<br />
+The one of the biggest advantages of VAE over regular autoencoder is that it can work as a data generator cause it has density function of normal distribution due to the KL divergence part in loss function. Below I show how VAE generates an image from a random noise generated from gaussian distribution.<br />
 ![image](https://github.com/user-attachments/assets/6625be38-1460-447b-87db-d672b59f3f53)
 
 It is worth noting that it should be compared with decoded real images and not with real images themselves. It surly would have resamble real images better if I had a better GPU to train VAE on.
@@ -36,7 +36,7 @@ t-SNE on real images:<br />
 t-SNE on encoded images:<br />
 ![image](https://github.com/user-attachments/assets/debc03e8-4317-49fe-a22e-b612bfef8c8a)
 
-Finally I tested how much information is preserved in the encoded image. To do that I run the Support Vector Classification (SVC) on real images, encoded images and decoded images. The results imply very strong ability by VAE to extract features as the SVC on real images got 92% acc (same as decoded images) and 88% on encoded images! That is a huge success because the encoded image has only 400 features in total compared to 512 x 512 features that has a real, resize image.
+Finally I tested how much information is preserved in the encoded image. To do that I run the Support Vector Classification (SVC) on real images, encoded images and decoded images. The results imply very strong ability by VAE to extract features as the SVC on real images got 92% accuracy (same as decoded images) and 88% on encoded images! That is a huge success because the encoded image has only 400 features in total compared to 512 x 512 features that has a real, resized image.
 
 ### Grid of 25 real and decoded images
 ![image](https://github.com/user-attachments/assets/79396d17-a564-4aea-93e8-9de7d7246681)
