@@ -26,7 +26,7 @@ The one of the biggest advantages of VAE over regular autoencoder is that it can
 
 It is worth noting that it should be compared with decoded real images and not with real images themselves. It surly would have resamble real images better if I had a better GPU to train VAE on.
 
-## Classification and component analysis
+## Classification and feature extraction
 
 After I've trained a VAE I wanted to check how well it extracts features from a real images. I run t-SNE on real images and encoded images to check if visually it creates better base for component analysis. In my opinion it does.
 
