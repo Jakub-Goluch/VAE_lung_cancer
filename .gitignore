@@ -1,0 +1,13 @@
+checkpoints
+chest_xray
+figures
+lung_colon_image_set
+model
+pykan
+venv
+generated_sample.png
+main.py
+tescik.py
+tsp.png
+.idea
+__pycache__
