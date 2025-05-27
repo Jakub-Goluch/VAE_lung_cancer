@@ -1,6 +1,6 @@
-# Variational Autoencoder for chess X-ray images with pneumonia
+# Variational Autoencoder for chest X-ray images of patients with pneumonia
 
-The aim of this project was to learn how to use Variational Autoencoders (VAE) to reduce dimensionaly representation of an image data and how to use VAE as a synthetic data generator. I used chest X-ray dataset with pacients who were healty and those who suffer from pneumonia.
+The aim of this project was to learn how to use Variational Autoencoders (VAE) to reduce dimensionaly representation of an image data and how to use VAE as a synthetic data generator. I used chest X-ray dataset with patients who were healty and those who suffer from pneumonia.
 
 ## Image encoding and decoding
 
