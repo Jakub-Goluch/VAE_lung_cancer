@@ -15,7 +15,7 @@ Example of the same image after encoding and decoding the data after 1st epoch:<
 ... and after 50th epoch:<br />
 ![image](https://github.com/user-attachments/assets/d2ed675f-12a2-45fe-8a63-9d8fcc6c1ae1)
 
-As u can see, the initial autoencoder creates very blury image which is sharpened at the end of a training stage.
+As you can see, the initial autoencoder creates very blury image which is sharpened at the end of a training stage.
 
 The loss function used in training process is a combination of regular binary cross-entropy to address the data reconstruction and KL divergence to make latent space a normal distribution so it can work as a synthetic data generator.
 
