@@ -1,10 +1,10 @@
-# Variational Autoencoder for chest X-ray images of patients with pneumonia
+# Variational Autoencoder for chest X-ray images of people with pneumonia
 
-The aim of this project was to learn how to use Variational Autoencoders (VAE) to reduce dimensionaly representation of an image data and how to use VAE as a synthetic data generator. I used chest X-ray dataset with patients who were healty and those who suffer from pneumonia.
+The aim of this project was to learn how to use Variational Autoencoders (VAE) to reduce dimensionaly representation of an image data and how to use VAE as a synthetic data generator. I used chest X-ray dataset with people who were healty and those who suffer from pneumonia.
 
 ## Image encoding and decoding
 
-The initial goal was to create VAE to make available reducing images from their initial size to a latent space and be able to efectivly decode them from that latent space to an image. I did that by first resizing all the images to a size of 512x512 pixels with Bilinear interpolation in case of a smaller images. It has to be done so all the tensors were the same size. After that I run a handwritten VAE consisting of encoder, decoder with added reparameterization trick, so the autoencoder become variational and to enable gradient propagation.
+The initial goal was to create VAE to make available reducing images from their initial size to a latent space and be able to efectivly decode them from that latent space to an image. I did that by first resizing all the images to a size of 512x512 pixels with Bilinear interpolation in case of a smaller images. It has to be done so all the tensors were the same size. After that I run a handwritten VAE consisting of an encoder and a decoder with added reparameterization trick, so the autoencoder become variational and to enable gradient propagation.
 
 Example of resized real image:<br />
 ![image](https://github.com/user-attachments/assets/97f6e5ca-783c-4f50-9a41-5872341fe362)
