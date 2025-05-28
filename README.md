@@ -6,6 +6,8 @@ The aim of this project was to learn how to use Variational Autoencoders (VAE) t
 
 The initial goal was to create VAE to make available reducing images from their initial size to a latent space and be able to efectivly decode them from that latent space to an image. I did that by first resizing all the images to a size of 512x512 pixels with Bilinear interpolation in case of a smaller images. It has to be done so all the tensors were the same size. After that I run a handwritten VAE consisting of an encoder and a decoder with added reparameterization trick, so the autoencoder become variational and to enable gradient propagation.
 
+The images are fainted with a green color to make better contrast than a grey color map would have had.
+
 Example of resized real image:<br />
 ![image](https://github.com/user-attachments/assets/97f6e5ca-783c-4f50-9a41-5872341fe362)
 
@@ -39,8 +41,7 @@ t-SNE on encoded images:<br />
 Finally I tested how much information is preserved in the encoded image. To do that I run the Support Vector Classification (SVC) on real images, encoded images and decoded images. The results imply very strong ability by VAE to extract features as the SVC on real images got 92% accuracy (same as decoded images) and 88% on encoded images! That is a huge success because the encoded image has only 400 features in total compared to 512 x 512 features that has a real, resized image.
 
 ### Grid of 25 real and decoded images
-The images are fainted with a green color to make better contrast than a grey color map would have had.
-
+The sample of 25 random images taken from real dataset and after the passing them through VAE.
 
 ![image](https://github.com/user-attachments/assets/79396d17-a564-4aea-93e8-9de7d7246681)
 ![image](https://github.com/user-attachments/assets/3cbc8aaf-5087-4c7a-aafb-e173c3de2c32)
